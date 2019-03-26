@@ -1,0 +1,23 @@
+<div id="search-user__wrapper">
+    <input id="search-user__input" type="text" #userInput [(ngModel)]="username">
+    <button id="search-user__find" type="button" (click)="searchUser(username)">FIND</button>
+</div>
+
+<table *ngIf="users; else usersNotFoundMessage" id="users-table">
+    <thead>
+        <tr>
+            <th>Login</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <th>
+                <a routerLink="/user/{{user}}">{{user}}</a>
+            </th>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #usersNotFoundMessage>
+    <span class="search-user__res--not-found">Users weren't found</span>
+</ng-template>

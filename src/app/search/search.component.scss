@@ -1,0 +1,58 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding-top: 10px;
+}
+
+#search-user__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#search-user__input {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid lightcoral;
+    outline: none;
+    font-size: 1.3em;
+    flex: 1;
+}
+
+#search-user__find {
+    border: none;
+    background: lightcoral;
+    padding: 5px 15px;
+    font-size: 1.3em;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-user__res--not-found {
+    margin: 10px 0;
+    align-self: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#users-table {
+    th {
+        color: white;
+        padding: 10px 0px;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+    }
+    thead th {
+        background: #f08080;
+    }
+    tbody tr{
+        &:nth-child(even) {
+            background: #f080809c;
+        }
+        &:nth-child(odd) {
+            background: #f0808061;
+        }
+    }
+}

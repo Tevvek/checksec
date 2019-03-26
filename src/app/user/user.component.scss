@@ -1,0 +1,29 @@
+.user__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2px 0;
+}
+
+.user__info {
+    color: white;
+    font-size: 1.3em;
+    background: #f08080;
+    padding: 10px 0 2px 0;
+}
+
+.user__label {
+    font-size: 0.8em;
+    color: white;
+    padding: 3px 0;
+    background: #f080809c;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+}

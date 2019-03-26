@@ -1,0 +1,37 @@
+<div *ngIf="user.login; else userNotFound">
+  <div class="user__wrapper">
+    <span class="user__info">{{user.login}}</span>
+    <span class="user__label">Login</span>
+  </div>
+  <div class="user__wrapper">
+    <span class="user__info">{{user.name}}</span>
+    <span class="user__label">Name</span>
+  </div>
+  <div class="user__wrapper">
+    <span class="user__info">{{user.email}}</span>
+    <span class="user__label">Email</span>
+  </div>
+  <div class="user__wrapper">
+    <span class="user__info">{{user.hireable}}</span>
+    <span class="user__label">Hireable</span>
+  </div>
+</div>
+
+<ul *ngIf="repos.length; else reposIsEmpty">
+  <li *ngFor="let repo of repos" class="user__wrapper">
+      <span class="user__info">Language: {{repo.language}}</span>
+      <span class="user__info">Default branch: {{repo.default_branch}}</span>
+      <span class="user__info">Is archived?: {{repo.archived}}</span>
+      <span class="user__info">Watchers: {{repo.watchers}}</span>
+      <span class="user__label">Repo name: {{repo.name}}</span>
+  </li>
+</ul>
+<button routerLink="/search/{{login}}">Atrás</button>
+
+<ng-template #reposIsEmpty>
+  <p>This user has no repositories</p>
+</ng-template>
+
+<ng-template #userNotFound>
+  <p>There is no user under this name</p>
+</ng-template>
